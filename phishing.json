@@ -1,0 +1,135 @@
+
+{
+  "type": "bundle",
+  "objects": [
+    {
+      "id": "indicator--a0451cb4-5d24-42ad-8c99-54ea1feeeec0",
+      "type": "indicator",
+      "created": "2012-03-22T07:26:00.000Z",
+      "modified": "2023-10-30T07:53:00.000Z",
+      "labels": [
+        "benign",
+        "xfe-threat-score-1"
+      ],
+      "name": "IP Report for IP address 206.180.5.58",
+      "description": "One of the five RIRs announced a (new) location mapping of the IP.",
+      "pattern": "[ ipv4-addr:value = '206.180.5.58' ]",
+      "valid_from": "2023-10-30T07:53:00.000Z",
+      "created_by_ref": "identity--e9abf985-9965-98cb-c9e7-a229fafb3584"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--e9abf985-9965-98cb-c9e7-a229fafb3584",
+      "created": "2012-03-22T07:26:00.000Z",
+      "modified": "2023-10-30T07:53:00.000Z",
+      "name": "IBM X-Force",
+      "identity_class": "organization"
+    },
+    [
+      {
+        "type": "identity",
+        "name": "SANS ISC",
+        "spec_version": "2.1",
+        "id": "identity--eee393a4-9f7f-55c8-939f-be1640573a33",
+        "created": "2023-11-07T19:21:40.610Z",
+        "modified": "2023-11-07T19:21:40.610Z",
+        "identity_class": "system",
+        "x_ibm_analyzer_definition": "DShield_Connector",
+        "x_ibm_analyzer_id": "24885e4d-a346-48ca-bb90-840c243dfc18"
+      },
+      {
+        "id": "extension-definition--3bb57c17-477e-5bd4-bdbd-f588899678cf",
+        "type": "extension-definition",
+        "spec_version": "2.1",
+        "name": "DShield_Connector extension",
+        "created": "2023-11-07T19:21:40.610Z",
+        "modified": "2023-11-07T19:21:40.610Z",
+        "created_by_ref": "identity--eee393a4-9f7f-55c8-939f-be1640573a33",
+        "schema": "https://www.ibm.com/cp4s",
+        "version": "1.2.1",
+        "extension_types": [
+          "toplevel-property-extension"
+        ],
+        "extension_properties": [
+          "x_ibm_original_threat_feed_data",
+          "threat_score",
+          "threat_attributes",
+          "x_ibm_analyzer_definition",
+          "x_ibm_analyzer_id"
+        ]
+      },
+      {
+        "type": "indicator",
+        "spec_version": "2.1",
+        "id": "indicator--676136a4-dd61-4971-96e5-a2506f81bbc0",
+        "pattern": "[ipv4-addr:value='206.180.5.58']",
+        "pattern_type": "stix",
+        "created_by_ref": "identity--eee393a4-9f7f-55c8-939f-be1640573a33",
+        "created": "2023-11-07T19:21:40.610Z",
+        "modified": "2023-11-07T19:21:40.610Z",
+        "valid_from": "2023-11-07T19:21:40.610Z",
+        "name": "206.180.5.58",
+        "description": "Threatfeed: None, Attack: None ",
+        "indicator_types": [
+          "unknown"
+        ],
+        "external_references": [
+          {
+            "source_name": "DShield_Connector",
+            "url": "https://isc.sans.edu/ipinfo.html?ip=206.180.5.58"
+          }
+        ],
+        "threat_score": 10,
+        "x_ibm_original_threat_feed_data": {
+          "success": true,
+          "full": [
+            {
+              "ioc_report": {
+                "number": "206.180.5.58",
+                "count": null,
+                "attacks": null,
+                "maxdate": null,
+                "mindate": null,
+                "updated": null,
+                "comment": null,
+                "maxrisk": null,
+                "asabusecontact": "abuse@reyrey.net",
+                "as": 16410,
+                "asname": "DKM3-ARIN",
+                "ascountry": "US",
+                "assize": 8960,
+                "network": "206.180.5.0/24"
+              }
+            }
+          ]
+        },
+        "threat_attributes": [
+          {
+            "attribute_name": "Country",
+            "attribute_value": "US",
+            "attribute_type": "string"
+          },
+          {
+            "attribute_name": "AS Number",
+            "attribute_value": "16410",
+            "attribute_type": "number"
+          },
+          {
+            "attribute_name": "AS Name",
+            "attribute_value": "DKM3-ARIN",
+            "attribute_type": "string"
+          },
+          {
+            "attribute_name": "Network",
+            "attribute_value": "206.180.5.0/24",
+            "attribute_type": "ip"
+          }
+        ]
+      }
+    ]
+  ],
+  "custom_objects": null,
+  "spec_version": "2.0",
+  "id": "bundle--234aca1a-9869-4e71-abb5-ab842e7a7e0b"
+}
